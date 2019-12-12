@@ -40,7 +40,7 @@ RUN echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.lis
 #-------------------------------------------------------------------------------
 # Install Additional Libraries
 #-------------------------------------------------------------------------------
-RUN curl https://repo1.maven.org/maven2/com/amazon/deequ/deequ/1.0.2/deequ-1.0.2.jar -- output /usr/spark-2.4.3-bin-hadoop2.7/jars/deequ-1.0.2.jar && \
+RUN curl https://repo1.maven.org/maven2/com/amazon/deequ/deequ/1.0.2/deequ-1.0.2.jar --output /usr/spark-2.4.3-bin-hadoop2.7/jars/deequ-1.0.2.jar && \
     curl https://repo1.maven.org/maven2/com/microsoft/azure/azure-storage/3.1.0/azure-storage-3.1.0.jar --output /usr/spark-2.4.3-bin-hadoop2.7/jars/azure-storage-3.1.0.jar && \
     curl https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-azure/2.7.3/hadoop-azure-2.7.3.jar --output /usr/spark-2.4.3-bin-hadoop2.7/jars/hadoop-azure-2.7.3.jar && \
     curl https://repo1.maven.org/maven2/org/rogach/scallop_2.11/3.3.1/scallop_2.11-3.3.1.jar --output /usr/spark-2.4.3-bin-hadoop2.7/jars/scallop_2.11-3.3.1.jar
