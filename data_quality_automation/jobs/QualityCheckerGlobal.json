@@ -1,0 +1,45 @@
+{
+    "name":" QualityCheckerGlobal",
+    "new_cluster":{
+        "spark_version":"5.5.x-scala2.11",
+        "node_type_id":"Standard_DS3_v2",
+        "enable_elastic_disk":true,
+        "autoscale":{
+            "min_workers":1,
+            "max_workers":8
+        }
+    },
+    "libraries":[
+        {
+            "maven":{
+                "coordinates":"com.amazon.deequ:deequ:1.0.2"
+            }
+        },
+        {
+            "maven":{
+                "coordinates":"org.apache.hadoop:hadoop-azure:2.7.3"
+            }
+        },
+        {
+            "maven":{
+                "coordinates":"org.rogach:scallop_2.11:3.3.1"
+            }
+        },
+        {
+            "maven":{
+                "coordinates":"com.microsoft.azure:azure-storage:3.1.0"
+            }
+        }
+    ],
+    "email_notifications":{
+
+    },
+    "timeout_seconds":0,
+    "spark_jar_task":{
+        "jar_uri":"dataqualityautomation_2.11-0.0.1.jar",
+        "main_class_name":"QualityCheckerGlobalMain",
+        "parameters":[],
+        "run_as_repl":true
+    },
+    "max_concurrent_runs":4
+}

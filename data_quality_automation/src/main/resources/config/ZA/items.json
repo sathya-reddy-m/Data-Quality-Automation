@@ -1,0 +1,170 @@
+{
+    "zone": "ZA",
+    "entity_name": "items",
+    "rules": 
+    {
+        "sku": {
+            "type": "string",
+            "constraints":
+            [
+                "isComplete",
+                "isUnique"
+            ]
+        },
+		
+        "item_name": {
+            "type": "string",
+            "constraints":[
+                "isComplete"
+            ]        
+        },
+        "brand_id": {
+            "type": "string",
+            "constraints":[
+                "isComplete",
+                {
+                    "hasPattern": "[0-9]+"
+                }
+            ]
+        },
+        
+        "category": {
+            "type": "string",
+            "constraints":[
+                "isComplete",
+                {            
+                "isContainedIn": [
+                    "CIDER",
+                    "CLEAR BEER",
+                    "FABS",
+                    "NON BEVERAGE",
+                    "UNASSIGNED - BEER",
+                    "UNASSIGNED - OTHER ALC BEVERAG",
+                    "UNASSIGNED - SOFTDRINKS",
+                    "UNDEFINED"
+                ]
+             }
+            ]
+            
+        },
+        
+        "sub_brand_name": {
+            "type":"string",
+            "constraints":[
+                "isComplete"
+            ]
+        },
+        
+        "container_name": {
+            "type":"string",
+            "constraints":[
+                "isComplete",
+                {
+                    "isContainedIn": [
+                        "BIB",
+                        "BOT",
+                        "CAN",
+                        "CANNISTER",
+                        "KEG",
+                        "OT",
+                        "TANK"
+                    ]
+                }
+            ]
+        },
+
+        "container_size":{
+            "type":"string",
+            "constraints":[
+                "isComplete",
+                {
+                    "hasPattern": "[0-9]+"
+                }
+            ]
+        },        
+        
+        "container_unit_of_measurement":{
+            "type":"string",
+            "constraints":[
+                "isComplete",
+                {
+                    "isContainedIn": [
+                        "ML"
+                    ]
+                }
+            ]
+            
+        },
+        "container_returnable":{
+            "type":"string",
+            "constraints":[
+                "isComplete",
+                {
+                    "isContainedIn": [
+                        "TRUE",
+                        "FALSE"
+                    ]
+                }
+            ]
+        },
+        "package_id":{
+            "type":"string",
+            "constraints":[
+                "isComplete",
+                {
+                    "isContainedIn": [
+                        "CS",
+                        "EA",
+                        "KEG",
+                        "KG",
+                        "L"
+                    ]
+                }
+            ]
+        },
+        "package_name":{
+            "type":"string",
+            "constraints":[
+                "isComplete",
+                {
+                    "isContainedIn": [
+                        "01X01",
+                        "01X02",
+                        "01X04",
+                        "01X06",
+                        "01X10",
+                        "01X12",
+                        "01X15",
+                        "01X16",
+                        "01X18",
+                        "01X24",
+                        "02X06",
+                        "02X12",
+                        "03X08",
+                        "04X06",
+                        "05X06",
+                        "06X04",
+                        "ZZZZZ"
+                    ]
+                }
+            ]
+        },
+        
+        "package_item_count":{   
+            "type":"string",         
+            "constraints":[
+                "isComplete",
+                {
+                    "isContainedIn": [
+                        "0",
+                        "1",
+                        "4",
+                        "6",
+                        "12",
+                        "24"
+                    ]
+                }
+            ]
+        }
+    }
+}		

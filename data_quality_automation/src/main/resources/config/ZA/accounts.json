@@ -1,0 +1,97 @@
+{
+    "zone": "ZA",
+    "entity_name": "account",
+	"rules":{
+            
+            "accountid": 
+            {
+                "type": "string",
+                "constraints":[
+                    "isComplete",
+                    "isUnique"
+                ]
+            },
+            "name": 
+            {
+                "type":"string",
+                "constraints":[
+                    "isComplete",
+                    "isUnique"
+                ]
+            },
+            "latitude":
+            {
+                "type":"double",
+                "constraints":[
+                    "isComplete",
+                    {
+                        "isContainedIn":{
+                            "lowerBound":-34.9,
+                            "upperBound":-22.1
+                        }                        
+                    }                        
+                ]
+            },
+            "longitude":
+            {
+                "type":"double",
+                "constraints":[
+                    "isComplete",
+                    {
+                        "isContainedIn":{
+                            "lowerBound":16.45,
+                            "upperBound":32.9
+                        }                        
+                    }                        
+                ]
+            },
+            "channel": {
+                "type":"string",
+                "constraints":[
+                    "isComplete",
+                    {
+                        "isContainedIn": [
+                            "OUT OF HOME",
+                            "IN HOME"
+                        ]
+                    }
+                ]
+            },
+            "delivery_center_id": {
+                "type":"string",
+                "constraints":[
+                    "isComplete",
+                    {
+                        "hasPattern": "[0-9]{4}"
+                    }
+                ]
+            },
+            "status": {
+                "type":"string",
+                "constraints":[
+                    "isComplete",
+                    {
+                        "isContainedIn": [
+                            "ACTIVE",
+                            "BLOCKED"
+                        ]
+                    }
+                ]
+            },
+            "segment": 
+            {
+                "type": "string",
+                "constraints":[
+                    "isComplete"
+                ]
+            },
+            "subsegment": 
+            {
+                "type": "string",
+                "constraints":[
+                    "isComplete"
+                ]
+            }
+            
+		}
+}		

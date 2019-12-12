@@ -1,0 +1,30 @@
+{
+    "zone": "ZA",
+    "entity_name": "offers",
+	"rules": {
+        "accountid": {
+            "type":"string",
+            "constraints":[
+                "isComplete"
+            ]
+        },
+        "minimum_order": {
+            "type":"string",
+            "constraints":[
+                "isComplete"
+            ]
+        },
+        "price": {
+            "type":"string",
+            "constraints":[
+                "isComplete"
+            ]
+        },
+        "sku": {
+            "type":"string",
+            "constraints":[
+                "isComplete"
+            ]
+        }
+    }
+}		

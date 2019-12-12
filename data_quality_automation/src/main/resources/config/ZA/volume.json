@@ -1,0 +1,122 @@
+{
+    "zone": "ZA",
+    "entity_name": "volume",
+	"rules": {
+
+            "order_id": 
+            {
+                "type":"string",
+                "constraints":[
+                    "isComplete"
+                ]
+            },
+            
+            "placement_date": {
+                "type":"string",
+                "constraints":[
+                    "isComplete",
+                    {
+                        "hasPattern": "20[0-3][0-9](0|1)[0-9][0-3][0-9]"
+                    }
+                ]
+            },
+        
+            "accountid": {
+                "type":"string",
+                "constraints":[
+                    "isComplete"
+                ]
+            },
+            "channel": {
+                "type":"string",
+                "constraints":[
+                    "isComplete",
+                    {
+                        "isContainedIn": [
+                            "B2B  - Web Order",
+                            "B2B - Electronic Ordering",
+                            "Bulk Order Process",
+                            "CIC - CRM Account Manager",
+                            "CIC - CRM CIC",
+                            "CIC - Call Center",
+                            "CIC - JAB Order CIC",
+                            "JAB Order Bulk",
+                            "JAB Order ECC",
+                            "Mobile JAB Order",
+                            "Mobile Order",
+                            "SAP ECC entry"
+                        ]
+                    }
+                ]
+            },
+        
+            "status":{
+                "type":"string",
+                "constraints":[
+                    "isComplete",
+                    {
+                        "isContainedIn": [
+                            "Completely processed",
+                            "Partially processed"
+                        ]
+                    }
+                ]
+            },
+            
+            "discount":{
+                "type":"string",
+                "constraints":[
+                    "isComplete"    
+                ]
+            },
+            
+            "subtotal":{
+                "type":"string",
+                "constraints":[
+                    "isComplete"    
+                ]
+            },
+
+            "total":{
+                "type":"string",
+                "constraints":[
+                    "isComplete"    
+                ]
+            },
+
+            "items_quantity":{
+                "type":"string",
+                "constraints":[
+                    "isComplete"    
+                ]
+            },
+
+            "items_sku":{
+                "type":"string",
+                "constraints":[
+                    "isComplete"    
+                ]
+            },
+
+            "items_price":{
+                "type":"string",
+                "constraints":[
+                    "isComplete"    
+                ]
+            },
+
+            "items_discount":{
+                "type":"string",
+                "constraints":[
+                    "isComplete"    
+                ]
+            },
+
+            "items_total":{
+                "type":"string",
+                "constraints":[
+                    "isComplete"    
+                ]
+            }
+        }
+}		
